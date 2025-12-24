@@ -8,7 +8,25 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.FileInputStream;
 
+/**
+ * Класс, осуществляющий поиск полей с аннотацией
+ * AutoInjectable и создание экземпляров классов из
+ * файла config.properties, используя рефлексию
+ * @param <T> тип объекта
+ * @author Егор
+ * @version 1.0
+ */
+
 public class Injector<T> {
+
+    /**
+     * Поиск полей с определённой аннотацией
+     * и создание экземпляров классов
+     * из файла config.properties
+     * @param object объект
+     * @return объект
+     */
+
     public T inject(T object) {
         Properties properties = new Properties();
         try (InputStream input = new FileInputStream("src/main/resources/config.properties")) {
