@@ -9,7 +9,7 @@ package org.example;
 public class SomeImpl implements SomeInterface {
 
     /**
-     * Один из методов
+     * Реализация одного из методов
      */
 
     public void doSomething() {
